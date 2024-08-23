@@ -1,12 +1,12 @@
 # Monster Hunter Builder
 
-### Tech Stack
-Frontend
+## Tech Stack
+### Frontend
 * HTML/SCSS/Typescript
 * Packaged with Vite
 
-Backend
+### Backend
 * Python : Flask/SQLAlchemy
 
-Database
+### Database
 * PostgreSQL
