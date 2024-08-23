@@ -6,7 +6,9 @@
 * Packaged with Vite
 
 ### Backend
-* Python : Flask/SQLAlchemy
+* Python
+* Flask Web Server
+* SQLAlchemy Core Query Generator
 
 ### Database
 * PostgreSQL
