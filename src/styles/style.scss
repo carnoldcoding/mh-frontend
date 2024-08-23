@@ -1,0 +1,83 @@
+#app{
+  background: $app-background;
+  min-height: 100dvh;
+  .builder-container{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gap;
+  
+    //STYLES FOR TABS/MOBILE
+    &.mobile{
+      grid-template-columns: 1fr;
+      gap: unset;
+      .tabulation-container{
+        display: flex;
+      }
+      > article{
+        &.hidden{
+          display: none;
+        }
+      }
+    }
+    
+    //REGULAR STYLES
+    .tabulation-container{
+      display: none;
+      border-bottom: 5px solid grey;
+      margin-bottom: $gap;
+      height: 50px;
+      border: 1px solid white;
+      gap: $gap;
+      position: sticky;
+      top: 0;
+      .tab{
+        background: rgba(0,0,0,.5);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        &:hover{
+          cursor: pointer;
+        }
+        &.active{
+          background: pink;
+        }
+        h3{
+          pointer-events: none;
+        }
+      }
+    }
+    > article{
+      border: 1px solid white;
+      min-height: 100px;
+      padding: 10px;
+      div{
+        border: 1px solid white;
+      }
+
+      &.skills-container{
+        .skills{
+          height: 100%;
+        }
+      }
+      &.equipment-container{
+        grid-column: span 2;
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+        border: unset;
+        padding: unset;
+        div{
+          min-height: 125px;
+        }
+      }
+      &.status-container{
+        .status{
+          height: 100%;
+        }
+      }
+    }
+  }
+}

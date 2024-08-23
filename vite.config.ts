@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import path from 'path';
 
 export default defineConfig({
   base: '/mh-frontend/',
@@ -10,8 +11,13 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "@/styles/variables.scss";`
+          additionalData: `@import "@/styles/config.scss";`
         }
+      }
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src')
       }
     },
     build: {

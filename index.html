@@ -7,7 +7,38 @@
     <title>Monster Hunter Builder</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <section class="builder-container tabular">
+        <header class="tabulation-container">
+          <div class="tab equipment active">
+            <h3>equipment</h3>
+          </div>
+          <div class="tab status">
+            <h3>status</h3>
+          </div>
+          <div class="tab skills">
+            <h3>skills</h3>
+          </div>
+        </header>
+        <article class="skills-container hidden">
+          <div class="skills">
+          </div>
+        </article>
+        <article class="equipment-container">
+          <div class="weapon-container"></div>
+          <div class="helmet-container"></div>
+          <div class="chest-container"></div>
+          <div class="arms-container"></div>
+          <div class="waist-container"></div>
+          <div class="legs-container"></div>
+          <div class="charm-container"></div>
+        </article>
+        <article class="status-container hidden">
+          <div class="status">
+          </div>
+        </article>
+      </section>
+    </div>
   </body>
   <script type="module" src="src/app.ts"></script>
 </html>
