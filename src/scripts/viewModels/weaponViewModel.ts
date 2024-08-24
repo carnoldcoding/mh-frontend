@@ -9,6 +9,8 @@ export const fetchWeaponData = async function(name : string){
         }
         const data = await response.json();
         console.log(data);
+
+        return data;
     } catch (error) {
         console.error(`Unable to get weapon data for ${name}`)
     }

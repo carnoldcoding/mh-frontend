@@ -32,6 +32,12 @@ $text-accent: #3FD9F8;
 
 //Mixins
 
+@mixin bg-blur {
+    background: rgba(0,0,0,.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
 @mixin ui-block {
     background: $ui-block-background;
     border: $ui-block-border;
