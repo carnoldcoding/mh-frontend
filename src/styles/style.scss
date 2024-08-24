@@ -87,10 +87,11 @@
         border: unset;
         padding-left: unset;
         padding-right: unset;
-        .item{
+        .block{
           min-height: 125px;
           display: flex;
           gap: $gap;
+          justify-content: center;
           &.weapon-container{
             padding: $padding;
             >div{
@@ -130,10 +131,15 @@
                 background: $ui-block-background;
               }
             }
-            @media screen and (max-width: 920px) {
-              flex-direction: column;
+            @include media(tablet){
+              flex-wrap: wrap;
               > div{
-                flex-basis: unset;
+                flex-basis: calc(50% - $gap);
+              }
+            }
+            @include media(mobile){
+              >div{
+                flex-basis: 100%;
               }
             }
           }
