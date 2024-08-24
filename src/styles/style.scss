@@ -4,7 +4,7 @@
   .builder-container{
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: $gap;
   
     //STYLES FOR TABS/MOBILE
@@ -80,7 +80,7 @@
         }
       }
       &.equipment-container{
-        grid-column: span 2;
+        grid-column: span 4;
         display: flex;
         flex-direction: column;
         gap: $gap;
@@ -95,9 +95,9 @@
             padding: $padding;
             >div{
               flex-basis: 25%;
+              min-height: 100px;
             }
             .weapon{
-              height: 100%;
               min-width: 50px;
               @include ui-block;
             }
@@ -106,7 +106,7 @@
               flex-direction: column;
               gap: $gap;
               .decoration{
-                height: 25px;
+                min-height: 35px;
                 width: 100%;
                 @include ui-block;
               }
@@ -128,6 +128,12 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background: $ui-block-background;
+              }
+            }
+            @media screen and (max-width: 920px) {
+              flex-direction: column;
+              > div{
+                flex-basis: unset;
               }
             }
           }
