@@ -4,7 +4,7 @@ import { mountListeners } from './scripts/viewModels/builderViewModel'
 import { fetchWeaponData } from './scripts/viewModels/weaponViewModel';
 
 //Debug
-fetchWeaponData();
+fetchWeaponData("iron");
 
 //Attach function
 mountListeners();
