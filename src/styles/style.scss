@@ -24,25 +24,43 @@
     //REGULAR STYLES
     .tabulation-container{
       display: none;
-      border-bottom: 5px solid grey;
+      border-bottom: 5px solid $ui-grey;
       margin-bottom: $gap;
       height: 50px;
-      border: 1px solid white;
+      //border: 1px solid white;
       gap: $gap;
       position: sticky;
       top: 0;
+      pointer-events: none;
       .tab{
-        background: rgba(0,0,0,.5);
+        @include ui-block;
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
+        position: relative;
+        text-transform: capitalize;
+        border-radius: 5px 5px 0px 0px;
+        border-color: $ui-grey;
+        pointer-events: all;
+        &::after{
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          height: 5px;
+          width: 0;
+          background: $text-accent;
+          transition: all .2s ease;
+        }
         &:hover{
           cursor: pointer;
         }
         &.active{
-          background: pink;
+          border-color: $ui-grey;
+          &::after{
+            width: 100%;
+          }
         }
         h3{
           pointer-events: none;
@@ -50,11 +68,10 @@
       }
     }
     > article{
-      border: 1px solid white;
+      //border: 1px solid white;
       min-height: 100px;
-      padding: 10px;
-      div{
-        border: 1px solid white;
+      > div{
+        @include ui-block;
       }
 
       &.skills-container{
@@ -68,9 +85,52 @@
         flex-direction: column;
         gap: $gap;
         border: unset;
-        padding: unset;
-        div{
+        padding-left: unset;
+        padding-right: unset;
+        .item{
           min-height: 125px;
+          display: flex;
+          gap: $gap;
+          &.weapon-container{
+            padding: $padding;
+            >div{
+              flex-basis: 25%;
+            }
+            .weapon{
+              height: 100%;
+              min-width: 50px;
+              @include ui-block;
+            }
+            .decorations{
+              display: flex;
+              flex-direction: column;
+              gap: $gap;
+              .decoration{
+                height: 25px;
+                width: 100%;
+                @include ui-block;
+              }
+            }
+            .augmentations{
+              @include ui-block;
+              h3{
+                @include ui-header;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: $ui-block-background;
+              }
+            }
+            .awakenings{
+              @include ui-block;
+              h3{
+                transform: translateY(-50%);
+                @include ui-header;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: $ui-block-background;
+              }
+            }
+          }
         }
       }
       &.status-container{

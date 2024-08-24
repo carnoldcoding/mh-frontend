@@ -6,9 +6,9 @@ const changeTab = function(e : any) {
     })
     e.target.classList.toggle('active');
 
-    tabViews.forEach(tabView => {
+    tabViews.forEach((tabView : Element) => {
         const tab = tabView.classList[0].split('-')[0];
-        const selectedTab = e.target.classList[1];
+        const selectedTab = e.target.textContent.trim();
         tabView.classList.add('hidden');
         if(selectedTab === tab){
             tabView.classList.remove('hidden');

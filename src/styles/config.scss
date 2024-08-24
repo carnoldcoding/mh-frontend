@@ -1,11 +1,14 @@
-//CSS Reset
+//Imports
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap'); //"IM Fell DW Pica", serif;
 
+//CSS Reset
 *{
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: "IM Fell DW Pica", serif;
+    font-weight: 400;
 }
 
 img, picture, video, canvas, svg {
@@ -14,6 +17,34 @@ img, picture, video, canvas, svg {
 }
 
 //Configs
-
 $app-background: #21334F;
 $gap: 15px;
+$padding: 15px;
+
+$ui-grey: #444444;
+$ui-block-background: rgba(0, 0, 0);
+$ui-block-border: 1px solid rgba(211, 211, 211, 0.548);
+$ui-block-radius: 5px;
+$ui-backdrop-filter: blur(5px);
+$ui-text-color: white;
+
+$text-accent: #3FD9F8;
+
+//Mixins
+
+@mixin ui-block {
+    background: $ui-block-background;
+    border: $ui-block-border;
+    border-radius: $ui-block-radius;
+    backdrop-filter: $ui-backdrop-filter;
+    -webkit-backdrop-filter: $ui-backdrop-filter;
+    color: $ui-text-color;
+    position: relative;
+}
+
+@mixin ui-header{
+    color: $text-accent;
+    text-transform: capitalize;
+    position: relative;
+    display: inline-block;
+}
