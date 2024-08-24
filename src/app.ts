@@ -1,6 +1,10 @@
 import './styles/style.scss'
-import './scripts/builderViewModel'
-import { mountListeners } from './scripts/builderViewModel'
+import './scripts/viewModels/builderViewModel'
+import { mountListeners } from './scripts/viewModels/builderViewModel'
+import { fetchWeaponData } from './scripts/viewModels/weaponViewModel';
+
+//Debug
+fetchWeaponData();
 
 //Attach function
 mountListeners();
