@@ -45,7 +45,7 @@ $text-accent: #3FD9F8;
 @mixin ui-header{
     color: $text-accent;
     text-transform: capitalize;
-    position: relative;
+    position: absolute;
     display: inline-block;
 }
 
