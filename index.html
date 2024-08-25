@@ -11,13 +11,24 @@
       <!-- MODAL -->
       <aside class="search-modal-container">
         <div class="search-modal">
-          <div class="searchbar-container">
-            <label for="searchbar">weapon name</label>
-            <input type="text" placeholder=" " class="searchbar">
-          </div>
+          <header>
+            <ion-icon name="close-outline"></ion-icon>
+            <div class="searchbar-container">
+              <div class="searchbar-wrapper">
+                <input type="text" placeholder=" " class="searchbar">
+                <label for="searchbar">weapon name</label>
+              </div>
+            </div>
+          </header>
+          
           <div class="results-container">
             <div class="result">
-              
+              <div class="icon">
+                <img src="./src/assets/icons/weapons/charge-blade/charge-blade-rank-01.svg">
+              </div>
+              <div class="name">
+                <p>Charge Blade</p>
+              </div>
             </div>
           </div>
         </div>
@@ -44,8 +55,8 @@
             <div class="weapon">
               <h3>weapon</h3>
               <div class="weapon-icon">
-                <div class="icon">
-                  <img src="./src/assets/icons/Weapons/Charge_Blade/Charge_Blade_rank_01.svg" alt="">
+                <div class="icon" id="current-weapon">
+                  <img src="./src/assets/icons/weapons/charge-blade/charge-blade-rank-01.svg" alt="">
                 </div>
                 <div class="attack">
                   <div class="icon">
@@ -86,4 +97,6 @@
     </div>
   </body>
   <script type="module" src="src/app.ts"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

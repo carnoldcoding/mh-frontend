@@ -1,5 +1,6 @@
 //Imports
 @import "./modal.scss";
+@import "./scrollbar.scss";
 
 #app{
   background: $app-background;
@@ -115,6 +116,9 @@
                   .icon{
                     height: auto;
                     width: 100%;
+                    &:hover{
+                      cursor: pointer;
+                    }
                   }
                   .attack{
                     display: flex;

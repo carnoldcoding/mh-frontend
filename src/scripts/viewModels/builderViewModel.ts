@@ -1,3 +1,5 @@
+import { toggleModal } from "./searchModalViewModel";
+
 const changeTab = function(e : any) {
     const tabs : NodeListOf<Element> = document.querySelectorAll('.tabulation-container > div');
     const tabViews : NodeListOf<Element> = document.querySelectorAll('.builder-container > article')
@@ -27,7 +29,9 @@ const toggleMobile = function(){
 
 export const mountListeners = function() {
     const tabContainer : Element | null = document.querySelector('.tabulation-container');
+    const weaponIcon : HTMLElement | null = document.querySelector('#current-weapon');
     tabContainer?.addEventListener('click', changeTab)
+    weaponIcon?.addEventListener('click', toggleModal);
 
     //Mobile Toggles
     window.addEventListener('resize', toggleMobile)
