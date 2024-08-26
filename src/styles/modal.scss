@@ -41,7 +41,7 @@
     
                 &:hover{
                     cursor: pointer;
-                    color: $text-accent;
+                    color: $ui-blue;
                 }
             }
     
@@ -75,9 +75,9 @@
                     padding: $padding;
                     font-size: 20px;
                     &:not(:placeholder-shown), &:focus{
-                        border-color: $text-accent;
+                        border-color: $ui-blue;
                         +label{
-                            color: $text-accent;
+                            color: $ui-blue;
                             font-size: 16px;
                             top: 0;
                             transform: translateY(-50%);
@@ -107,7 +107,7 @@
             gap: $gap;
             &:hover{
                 cursor: pointer;
-                border-color: $text-accent;
+                border-color: $ui-blue;
             }
             .icon{
                 height: auto;

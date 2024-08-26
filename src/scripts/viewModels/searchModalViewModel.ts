@@ -42,7 +42,13 @@ const handleClick = function(e : any){
 
 export const toggleModal = function() {
   if(modalContainer){
-    modalContainer.style.display = modalContainer.style.display === "none" ? "flex" : "none";
+    if(modalContainer.style.display === "none"){
+      modalContainer.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }else{
+      modalContainer.style.display = "none";
+      document.body.style.overflow = "unset";
+    }
   }
 }
 

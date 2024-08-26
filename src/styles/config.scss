@@ -27,8 +27,10 @@ $ui-block-border: 1px solid rgba(211, 211, 211, 0.548);
 $ui-block-radius: 5px;
 $ui-backdrop-filter: blur(5px);
 $ui-text-color: white;
+$ui-green: #3dc229;
+$ui-blue: #3FD9F8;
 
-$text-accent: #3FD9F8;
+$text-accent: $ui-blue;
 
 //Mixins
 
