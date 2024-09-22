@@ -1,3 +1,5 @@
+@import "./config.scss";
+
 .search-modal-container{
     @include bg-blur;
     position: absolute;
@@ -98,9 +100,8 @@
         overflow-y: scroll;
         padding: $padding;
         .result{
-            padding: calc($padding / 2);
+            padding: $padding-small;
             @include ui-block;
-            min-height: 60px;
             width: 100%;
             display: flex;
             align-items: center;
@@ -109,9 +110,87 @@
                 cursor: pointer;
                 border-color: $ui-blue;
             }
-            .icon{
-                height: auto;
-                width: 30px;
+            >*{
+                pointer-events: none;
+            }
+            .basic-info{
+                display: flex;
+                gap: $gap;
+                @include ui-block;
+                padding: $padding-small;
+                flex-basis: 50%;
+                .icon{
+                    height: auto;
+                    width: 75px;
+                    .rarity{
+                        text-align: center;
+                        span{
+                            font-size: 13px;
+                        }
+                    }
+                }
+                .column{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 10px;
+                    .name{
+                        max-width: 200px;
+                    }
+                    .sharpness{
+                        max-width: 75px;
+                        border: 2px solid $ui-grey;
+                        height: 10px;
+                        width: 100%;
+                        background: linear-gradient(90deg, rgba(255,154,0,1) 0%, rgba(255,248,0,1) 25%, rgba(0,255,98,1) 50%, rgba(0,65,255,1) 75%, rgba(244,0,255,1) 100%);
+                    }
+                    .decorations{
+                        display: flex;
+                        gap: 5px;
+                        img{
+                            height: auto;
+                            max-width: 30px;
+                        }
+                    }
+                }
+            }
+            .stats{
+                @include ui-block;
+                height: 100%;
+                flex-basis: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+                padding: $padding-small;
+                .stat{
+                    width: 40px;
+                    height: 60px;
+                    @include ui-block;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    overflow: hidden;
+                    .stat-icon{
+                        flex-basis: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: auto;
+                        width: 100%;
+                        background: rgb(34, 34, 34);
+                        img{
+                            width: 30px;
+                        }
+                    }
+                    .stat-value{
+                        flex-basis: 50%;
+                        font-size: 16px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
             }
         }
     }

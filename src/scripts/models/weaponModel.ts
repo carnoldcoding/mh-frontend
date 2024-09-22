@@ -6,6 +6,9 @@ export interface IWeapon {
     attack: number;
     attack_true: number;
     rarity: number;
+    slot_1: number;
+    slot_2: number;
+    slot_3: number;
 
     element1: string | null;
     element1_attack: number | null;
@@ -23,6 +26,9 @@ export class Weapon implements IWeapon{
     attack: number;
     attack_true: number;
     rarity: number;
+    slot_1: number;
+    slot_2: number;
+    slot_3: number;
 
     element1: string | null;
     element1_attack: number | null;
@@ -31,8 +37,7 @@ export class Weapon implements IWeapon{
 
     weapon_type: string;
 
-
-    constructor(weapon : Weapon){
+    constructor(weapon : IWeapon){
         this.name = weapon.name;
         this.id = weapon.id;
         this.description = weapon.description;
@@ -45,5 +50,8 @@ export class Weapon implements IWeapon{
         this.element2_attack = weapon.element2_attack;
         this.weapon_type = weapon.weapon_type;
         this.rarity = weapon.rarity;
+        this.slot_1 = weapon.slot_1;
+        this.slot_2 = weapon.slot_2;
+        this.slot_3 = weapon.slot_3;
     }
 }
