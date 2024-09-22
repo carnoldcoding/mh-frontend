@@ -16,6 +16,8 @@ export interface IWeapon {
     element2_attack: number | null;
 
     weapon_type: string;
+    sharpness: string;
+
 }
 
 export class Weapon implements IWeapon{
@@ -29,6 +31,8 @@ export class Weapon implements IWeapon{
     slot_1: number;
     slot_2: number;
     slot_3: number;
+    sharpness: string;
+
 
     element1: string | null;
     element1_attack: number | null;
@@ -53,5 +57,6 @@ export class Weapon implements IWeapon{
         this.slot_1 = weapon.slot_1;
         this.slot_2 = weapon.slot_2;
         this.slot_3 = weapon.slot_3;
+        this.sharpness = weapon.sharpness;
     }
 }
