@@ -27,11 +27,17 @@ const toggleMobile = function(){
     }
 }
 
+const handleClick = (e : any) => {
+    if(e.target.id === "current-weapon"){
+        toggleModal();
+    }
+}
+
 export const mountListeners = function() {
     const tabContainer : Element | null = document.querySelector('.tabulation-container');
-    const weaponIcon : HTMLElement | null = document.querySelector('#current-weapon');
-    tabContainer?.addEventListener('click', changeTab)
-    weaponIcon?.addEventListener('click', toggleModal);
+    const weaponContainer : HTMLElement | null = document.querySelector('.weapon-container');
+    tabContainer?.addEventListener('click', changeTab);
+    weaponContainer?.addEventListener('click', handleClick);
 
     //Mobile Toggles
     window.addEventListener('resize', toggleMobile)

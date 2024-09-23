@@ -5,15 +5,18 @@ export interface IWeapon {
     affinity: number;
     attack: number;
     attack_true: number;
+    defense: number;
     rarity: number;
     slot_1: number;
     slot_2: number;
     slot_3: number;
+    elderseal: string | null;
 
     element1: string | null;
     element1_attack: number | null;
     element2: string | null;
     element2_attack: number | null;
+    element_hidden: boolean;
 
     weapon_type: string;
     sharpness: string;
@@ -27,17 +30,21 @@ export class Weapon implements IWeapon{
     affinity: number;
     attack: number;
     attack_true: number;
+    defense: number;
     rarity: number;
     slot_1: number;
     slot_2: number;
     slot_3: number;
     sharpness: string;
+    elderseal: string | null;
 
 
     element1: string | null;
     element1_attack: number | null;
     element2: string | null;
     element2_attack: number | null;
+    element_hidden: boolean;
+
 
     weapon_type: string;
 
@@ -48,6 +55,7 @@ export class Weapon implements IWeapon{
         this.affinity = weapon.affinity;
         this.attack = weapon.attack;
         this.attack_true = weapon.attack_true;
+        this.defense = weapon.defense;
         this.element1 = weapon.element1;
         this.element1_attack = weapon.element1_attack;
         this.element2 = weapon.element2;
@@ -58,5 +66,7 @@ export class Weapon implements IWeapon{
         this.slot_2 = weapon.slot_2;
         this.slot_3 = weapon.slot_3;
         this.sharpness = weapon.sharpness;
+        this.elderseal = weapon.elderseal;
+        this.element_hidden = weapon.element_hidden;
     }
 }
